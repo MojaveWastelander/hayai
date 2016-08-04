@@ -21,3 +21,6 @@ tests/tests
 /debian/copyright
 /dist
 /.vagrant
+conanbuildinfo.cmake
+conanfile.pyc
+conaninfo.txt
