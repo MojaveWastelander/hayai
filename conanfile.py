@@ -1,7 +1,6 @@
 from conans import ConanFile, CMake, tools
 import os
 
-
 class HayaiConan(ConanFile):
     name = "Hayai"
     version = "1.0.1"
@@ -28,7 +27,8 @@ conan_basic_setup()''')
         self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
-        self.copy("*.h", dst="include", src="src")
+        self.copy("*.h", dst="include/hayai", src="hayai/src")
+        self.copy("*.hpp", dst="include/hayai", src="hayai/src", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", src="src", keep_path=False)
