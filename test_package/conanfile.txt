@@ -1,0 +1,5 @@
+[requires]
+Hayai/1.0.1@ebostijancic/testing
+
+[generators]
+cmake

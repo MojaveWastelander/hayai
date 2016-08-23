@@ -32,6 +32,8 @@ conan_basic_setup()''')
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", src="src", keep_path=False)
+        self.copy("*.lib", dst="lib", src="src/Debug", keep_path=False)
+        self.copy("*.lib", dst="lib", src="src/Release", keep_path=False)
 
     def package_info(self):
         self.cpp_info.libs = ["hayai", "hayai_main"]

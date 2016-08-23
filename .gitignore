@@ -24,3 +24,4 @@ tests/tests
 conanbuildinfo.cmake
 conanfile.pyc
 conaninfo.txt
+test_package/build/*
